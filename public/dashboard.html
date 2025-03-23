@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Toastify CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Toastify JS -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+<body>
+    <div class="dashboard">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <h1>Student Dashboard</h1>
+            <button onclick="logout()" style="width: auto; padding: 8px 16px;">Logout</button>
+        </div>
+        
+        <div class="add-student-form">
+            <h2 style="color: white; margin-bottom: 20px;">Add New Student</h2>
+            <form id="addStudentForm">
+                <div class="form-group">
+                    <label for="newName">Full Name</label>
+                    <input type="text" id="newName" required>
+                    <div class="error-message" id="newNameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="newEmail">Email</label>
+                    <input type="email" id="newEmail" required>
+                    <div class="error-message" id="newEmailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" id="newPassword" required>
+                    <div class="error-message" id="newPasswordError"></div>
+                </div>
+                <button type="submit">Add Student</button>
+            </form>
+            <div class="success-message" id="addStudentSuccess"></div>
+        </div>
+        
+        <div class="students-list">
+            <h2 style="color: white; margin-bottom: 20px;">Students List</h2>
+            <div id="studentsList"></div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html> 
