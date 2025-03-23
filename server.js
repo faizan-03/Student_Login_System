@@ -33,4 +33,6 @@ app.use((err, req, res, next) => {
 
 const localhost = 'http://localhost';
 
-app.listen(port, () => console.log(`Server running on ${localhost}:${port}`)); 
+app.listen(port, () => console.log(`Server running on ${localhost}:${port}`));
+ 
+module.exports = app; // Instead of app.listen()
